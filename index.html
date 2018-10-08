@@ -9,14 +9,15 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous"> 
+        <script type="text/javascript" src="script_first.js"></script>
         <style>
             body{
                 margin:0;
                 padding: 0;
-                
+                position: relative;
                 height: 100vh;
                 background:#000;
-                
+                z-index: 0;
             }
             p{
                 font-size: 10px;
@@ -33,10 +34,20 @@
                 height:100vh;
                 overflow: hidden;
             }
+            #mouse_circle{
+                width:30px;
+                height:30px;
+                border-radius: 50%;
+                
+                position:absolute;
+                z-index: 2;
+                box-shadow: 0px 0px 30px 0 rgba(255, 255, 255, 0.8)
+            }
         </style>
     </head>
 
     <body>
+        <div id="mouse_circle"></div>
         <div id="second_screen">
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tincidunt vitae ligula ac sodales. Integer volutpat in tortor ut efficitur. Suspendisse non ligula id erat fringilla sollicitudin at eu nisl. Fusce vel pharetra eros. In cursus risus non metus malesuada, vel placerat neque ultricies. Maecenas pellentesque egestas pretium. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus sodales semper massa, sed luctus urna. Proin consequat turpis velit, vel tincidunt elit vestibulum et.
