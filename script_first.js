@@ -7,10 +7,10 @@ function handler(e){
 
     if (x === undefined) {
         x = e.clientX + document.body.scrollLeft + document.documentElement.scrollLeft;
-        x = e.clientY + document.body.scrollTop + document.documentElement.scrollTop;
+        y = e.clientY + document.body.scrollTop + document.documentElement.scrollTop;
     }
 
-    console.log(x, y);
+   
     $("#mouse_circle").css("top",y-15);
     $("#mouse_circle").css("left",x-15);
 }
