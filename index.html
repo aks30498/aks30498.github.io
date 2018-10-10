@@ -11,6 +11,9 @@
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css">
     <style>
+        *{
+            box-sizing: border-box !important;
+        }
         body{
             background-color:black; 
             color:white; 
@@ -54,8 +57,8 @@
         }
         #knob{
             position:absolute;
-            width:30px;
-            height:30px;
+            width:50px;
+            height:50px;
             border-radius: 50%;
             border: 1px solid white;
             cursor:pointer;
@@ -71,7 +74,34 @@
             
             $("#contents > h1").hide().fadeIn(1000,function(){
                 $("#slit_container").slideDown(1000);
-                $("#knob").draggable({containment: "#slit", stop: function(){ if(($("#knob").offset().top+29)== ($("#slit").height() + $("#slit").offset().top ) ){ window.open("second_page.html","_self");} } });
+                $("#knob").draggable({containment: "#slit", 
+                axis:"y", 
+                stop: function(){ 
+                    if(($("#knob").offset().top+49)== ($("#slit").height() + $("#slit").offset().top ) )
+                    { 
+                        window.open("entry_page.html","_self");
+                    } 
+                    },
+                drag: function(){
+                    var s_height = $("#slit").height();
+                    
+                    switch($("#knob").css("top")){
+                        case Math.round(s_height/10) + "px":
+                        $("#knob > i").prop("class","fab fa-css3-alt fa-2x");
+                        break;
+                        
+                        case Math.round(s_height/5) + "px":
+                        $("#knob > i").prop("class","fab fa-js-square fa-2x");
+                        break;
+                    }
+
+
+                    if($("#knob").css("top")== Math.round(s_height/10) + "px"){
+                        //alert("yes");
+                        $("#knob > i").prop("class","fab fa-css3-alt fa-2x");
+                    }
+                } }); 
+                
             });
             $("#contents > h2").hide().fadeIn(2000);
         });
@@ -85,7 +115,7 @@
         </div>
         <div class="container" id="slit_container">
             <div id="slit">
-                <div id="knob"><i class="fab fa-html5 "></i></div>
+                <div id="knob"><i class="fab fa-html5 fa-2x"></i></div>
             </div>
         </div>
     </body>

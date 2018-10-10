@@ -1,0 +1,118 @@
+<!Doctype HTML>
+<html>
+    <head>
+        <title>Welcome to my profile!</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous"> 
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css">
+        <link rel="stylesheet" href="styles.css">
+        <script>
+            $(document).ready(function($){
+                $(".row.justify-content-center").hide();
+                $( "#content_section" ).animate({ "width": "66%" }, "slow", function(){
+                     $("#content_section").prop("class","col-sm-8 flex_center");
+                     $(".row.justify-content-center").fadeIn(700);
+                    }
+                );
+                
+            });
+        </script>
+        <style>
+            #img_section{
+                box-shadow: 2px 0px 10px rgba(0,0,0,0.6);
+                height: 100vh;
+            }
+            #drawer{
+                box-shadow: -2px 0px 10px rgba(0,0,0,0.6);
+                height: 100vh;
+            }
+            body{
+                height:100vh;
+            }
+            #content_section{
+                width:0px;
+                height: 100vh;
+                overflow: hidden;
+            }
+            i.fas{
+                flex-basis: 100%;
+                text-align: center;
+                margin-bottom: 30px
+            }
+            h4{
+                flex-basis: 100%;
+                text-align: center;
+            }
+            .hundred:hover{
+                text-shadow: 0px 0px 1px #000000 !important;
+            } 
+        </style>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div id="img_section" class="col-sm-3">
+
+                </div>
+                <div class="" id="content_section">
+                    <div class="container-fluid ">
+                        <div class="row justify-content-center">
+                            <div class="col-sm-5 flex_center" id="personal_info">
+                                <div  class="hundred flex_center">
+                                        <i style="color:#4A148C" class="fas fa-info-circle fa-2x "></i>
+                                        <h4 style="color:#4A148C" class="light">Personal Information</h4>
+                                </div>
+                            </div>
+                            <div class="col-sm-5 flex_center">
+                                <div  class="hundred flex_center">
+                                        <i style="color:#1976D2" class="fas fa-code fa-2x "></i>
+                                        <h4 style="color:#1976D2" class="light">Skill Set</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-fluid ">
+                        <div class="row justify-content-center">
+                            <div class="col-sm-5 flex_center" id="personal_info">
+                                <div  class="hundred flex_center">
+                                        <i style="color:#B71C1C" class="fas fa-desktop fa-2x "></i>
+                                        <h4 style="color:#B71C1C" class="light">Projects</h4>
+                                </div>
+                            </div>
+                            <div class="col-sm-5 flex_center">
+                                <div  class="hundred flex_center">
+                                        <i style="color:#6D4C41" class="fas fa-user-graduate fa-2x "></i>
+                                        <h4 style="color:#6D4C41" class="light">Academics</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-fluid ">
+                        <div class="row justify-content-center">
+                            <div class="col-sm-5 flex_center" id="personal_info">
+                                <div  class="hundred flex_center">
+                                        <i style="color:#33691E" class="fas fa-gamepad fa-2x "></i>
+                                        <h4 style="color:#33691E" class="light">Hobbies</h4>
+                                </div>
+                            </div>
+                            <div class="col-sm-5 flex_center">
+                                <div  class="hundred flex_center">
+                                        <i style="color:#E65100" class="fas fa-quote-left fa-2x "></i>
+                                        <h4 style="color:#E65100" class="light">References</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-1" id="drawer">
+
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
