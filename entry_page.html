@@ -20,14 +20,43 @@
                     }
                 );
 
-               //making the options draggable
+               //on click event for options
+               $(".hundred").on("click",function(){
+                var ht= $(this).html();
+                $("#content_section").prop("class","");
+                $("#content_section").animate({ "width": "0px" }, "slow");
+                $('#option_card').animate({
+                    top:-200,
+                    opacity: 0,
+                    transition: "opacity 0.2s ease-out",
+                    transition: "top 0.2s ease-out",
+                },"slow",function(){
+                    $("#selected_option").html(ht);
+                    $("#option_card").animate({
+                    top:-50,
+                    opacity: 1,
+                    transition: "opacity 0.2s ease-out",
+                    transition: "top 0.2s ease-out",
+                    },"slow",function(){
+                        $("#content_section").animate({ "width": "66%" }, "slow",function(){
+                        $("#content_section").prop("class","col-sm-8 flex_center");  
+                        });
+                    });
+                }); 
+                 
+               });
               
             });
         </script>
         <style>
+            body{
+                height:100vh;
+            }
             #img_section{
                 box-shadow: 10px 0px 20px rgba(0,0,0,0.6);
                 height: 100vh;
+                position:relative;
+                z-index: 0;
                 
             }
             #drawer{
@@ -38,13 +67,23 @@
             #drawer,#img_section{
                 background: url("img_back1.jfif");
             }
-            body{
-                height:100vh;
-            }
             #content_section{
                 width:0px;
                 height: 100vh;
                 overflow: hidden;
+            }
+            #holder_row{
+                background: rgba(0,0,0,0.5);
+                height:150px;
+                position: relative;
+                z-index: -1;
+            }
+            #option_card{
+                background: white;
+                height:150px;
+                position:relative;
+                top:-50px;
+                z-index: 1;
             }
             i.fas{
                 flex-basis: 100%;
@@ -64,14 +103,15 @@
         <div class="container-fluid">
             <div class="row">
                 <div id="img_section" class="col-sm-3 flex_center">
-                    <div class="row justify-content-center">
-                       <div class="col-10"></div>
-                            <div id="selected_option" style="text-align:center">
-                                <i style="color:white" class="fas fa-info-circle fa-4x "></i>
-                                <h2 style="color: white" class="light">Personal Information</h2>                                
-                            </div>
-                        </div>
+                    <div id="holder_row" class="row justify-content-center" style="width:80%; padding-top:20px; padding-bottom:20px">
+                       <div id="option_card" class="col-10 flex_center">
+                            <div id="selected_option" style="text-align:center; color:white !important">
+                                                                 
+                             </div>
+                       </div>
+                            
                     </div>
+                </div>
                 
                 <div class="" id="content_section">
                     <div class="container-fluid ">
