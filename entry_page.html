@@ -19,17 +19,24 @@
                      $(".row.justify-content-center").fadeIn(700);
                     }
                 );
-                
+
+               //making the options draggable
+              
             });
         </script>
         <style>
             #img_section{
-                box-shadow: 2px 0px 10px rgba(0,0,0,0.6);
+                box-shadow: 10px 0px 20px rgba(0,0,0,0.6);
                 height: 100vh;
+                
             }
             #drawer{
-                box-shadow: -2px 0px 10px rgba(0,0,0,0.6);
+                box-shadow: -5px 0px 20px rgba(0,0,0,0.6);
                 height: 100vh;
+               
+            }
+            #drawer,#img_section{
+                background: url("img_back1.jfif");
             }
             body{
                 height:100vh;
@@ -56,9 +63,16 @@
     <body>
         <div class="container-fluid">
             <div class="row">
-                <div id="img_section" class="col-sm-3">
-
-                </div>
+                <div id="img_section" class="col-sm-3 flex_center">
+                    <div class="row justify-content-center">
+                       <div class="col-10"></div>
+                            <div id="selected_option" style="text-align:center">
+                                <i style="color:white" class="fas fa-info-circle fa-4x "></i>
+                                <h2 style="color: white" class="light">Personal Information</h2>                                
+                            </div>
+                        </div>
+                    </div>
+                
                 <div class="" id="content_section">
                     <div class="container-fluid ">
                         <div class="row justify-content-center">
